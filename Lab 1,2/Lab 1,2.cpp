@@ -68,7 +68,13 @@
 
         else cout << "Об'єкти 2 i 3 різнi" << endl;
 
+        if (obj1 == obj3) {
 
+            cout << "Об'єкти 1 i 3 одинаковi" << endl;
+
+        }
+
+        else cout << "Об'єкти 1 i 3 різнi" << endl;
       
 
 
