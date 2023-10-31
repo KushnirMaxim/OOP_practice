@@ -1,6 +1,7 @@
 ﻿
 #include <iostream>
 #include"Employee.h"
+#include"Volunteer.h"
 
     using namespace std;
 
@@ -33,7 +34,9 @@
     {
 
         setlocale(LC_CTYPE, "ukr");
-
+        
+        Volunteer volunteer(3, "Kushnir", "Maxim","9A", "9_April",38032523, "MaksimKush@gmail.com", "Help", 3);
+        volunteer.print();
         Employee obj1, obj2, obj3;
 
         cout << "id,surname,name,position,data of birth, number of phone, email, current salary, data of employment" << endl;
