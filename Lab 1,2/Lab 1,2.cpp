@@ -1,33 +1,13 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include"Employee.h"
 #include"Volunteer.h"
+#include"Human.h"
 
-    using namespace std;
-
-
-
-    ostream& operator<<(ostream & os, const Employee & employee) {
-
-        os << endl << "id = " << employee.id << endl << "Surname = " << employee.surname << endl << "name = " << employee.name << endl << "Position =" << employee.position << endl << "Data of birth = " << employee.dataOfBirth << endl << "Number of phone = " << employee.numberOfPhone << endl << "email = " << employee.email << endl << "Current salary = " << employee.currentSalary << endl << "Data of employment =" << employee.dataOfEmployment << endl << "--------------------------" << endl;
-
-        return os;
-
-    }
-
-    istream& operator>>(istream & is, Employee & employee)
-
-    {
-
-        is >> employee.id >> employee.surname >> employee.name >> employee.position >> employee.dataOfBirth >> employee.numberOfPhone >> employee.email >> employee.currentSalary >> employee.dataOfEmployment;
-
-        return is;
-
-    }
+using namespace std;
 
 
 
-
+  
 
     int main()
 
@@ -35,51 +15,25 @@
 
         setlocale(LC_CTYPE, "ukr");
         
-        Volunteer volunteer(3, "Kushnir", "Maxim","9A", "9_April",38032523, "MaksimKush@gmail.com", "Help", 3);
-        volunteer.print();
-        Employee obj1, obj2, obj3;
+        Volunteer volunteerA(3, "Kushnir", "Maxim","9_April",38032523, "MaksimKush@gmail.com","9A", "Help", 3);
+        
+        Volunteer volunteerB(volunteerA);
 
-        cout << "id,surname,name,position,data of birth, number of phone, email, current salary, data of employment" << endl;
+        volunteerA.print();
+        volunteerB.print();
 
-        cin >> obj1;
+        Human humanB(1,"Pan","Vlad","10_Feb",380494,"email.com");
+       
+        Human humanA(humanB);
 
-        cout << "id,surname,name,position,data of birth, number of phone, email, current salary, data of employment" << endl;
+        Employee employeeA(3, "Mib", "Dark", "7_March", 35235, "Komar2314@gmail.com", "Developer", 3000, "8_September");
+        Employee employeeB(employeeA);
 
-        cin >> obj2;
+        employeeA.print();
+        employeeB.print();
 
-        cout << "id,surname,name,position,data of birth, number of phone, email, current salary, data of employment" << endl;
-
-        cin >> obj3;
-
-        cout << obj1 << endl << obj2 << endl << obj3;
-
-        if (obj1 == obj2) {
-
-            cout << "Об'єкти 1 i 2 одинаковi" << endl;
-
-        }
-
-        else cout << "Об'єкти 1 i 2 різнi" << endl;
-
-
-
-        if (obj2 == obj3) {
-
-            cout << "Об'єкти 2 i 3 одинаковi" << endl;
-
-        }
-
-        else cout << "Об'єкти 2 i 3 різнi" << endl;
-
-        if (obj1 == obj3) {
-
-            cout << "Об'єкти 1 i 3 одинаковi" << endl;
-
-        }
-
-        else cout << "Об'єкти 1 i 3 різнi" << endl;
-      
-
+        humanA.print();
+        humanB.print();
 
     }
 

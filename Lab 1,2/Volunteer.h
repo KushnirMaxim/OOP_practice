@@ -1,27 +1,15 @@
 #pragma once
 
 #include<iostream>
-
+#include"Human.h"
 using namespace std;
 
-class Volunteer
+class Volunteer:public Human
 {
 
 private:
 
-    int id;
-
-    string surname;
-
-    string name;
-
-    string dataOfBirth;
-
-    int numberOfPhone;
-
     string address;
-
-    string email;
 
     string typeOfActivity;
 
@@ -33,11 +21,11 @@ public:
 
     Volunteer();
 
-    Volunteer(int, string, string, string, string, int, string, string,int);
+    Volunteer(int, string, string, string, int, string,string, string,int);
 
-    Volunteer(Volunteer& other);
-
+    Volunteer(const Volunteer& other);
 
     ~Volunteer();
+
     void print();
 };
