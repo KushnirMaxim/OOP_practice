@@ -3,7 +3,6 @@
 
 
 Employee::Employee()
-
 {
 
 }
@@ -11,7 +10,6 @@ Employee::Employee()
 
 
 Employee::Employee(int id, string surname, string name, string position, int numberOfPhone, string dataOfBirth, string email, double currentSalary, string dataOfEmployment):Human(id, surname, name, dataOfBirth, numberOfPhone, email)
-
 {
 
     this->position = position;
@@ -25,7 +23,6 @@ Employee::Employee(int id, string surname, string name, string position, int num
 
 
 Employee::Employee(Employee& other) :Human(other)
-
 {
     this->position = other.position;
 
@@ -40,6 +37,11 @@ Employee::Employee(Employee& other) :Human(other)
 Employee::~Employee()
 {
 
+}
+
+void Employee::Hello() 
+{
+    cout << "Hello i am employee" << endl;
 }
 
 void Employee::print()

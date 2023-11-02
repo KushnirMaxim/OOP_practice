@@ -1,11 +1,9 @@
 #pragma once
-
 #include<iostream>
 #include"Human.h"
 using namespace std;
 
 class Employee:public Human
-
 {
 
 private:
@@ -26,6 +24,8 @@ public:
     Employee(Employee& other);
 
     ~Employee();
+
+    void Hello() override;
 
     void print();
 };

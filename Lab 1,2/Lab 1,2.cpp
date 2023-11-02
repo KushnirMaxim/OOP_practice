@@ -9,33 +9,18 @@ using namespace std;
 
   
 
-    int main()
+int main()
+{
+	Employee employee(1,"text","text","text",2,"text","text",123,"text");
 
-    {
+	employee.Hello();
+	Volunteer volunteer(1, "text", "text", "text",4, "text", "text", "text",4);
 
-        setlocale(LC_CTYPE, "ukr");
-        
-        Volunteer volunteerA(3, "Kushnir", "Maxim","9_April",38032523, "MaksimKush@gmail.com","9A", "Help", 3);
-        
-        Volunteer volunteerB(volunteerA);
+	volunteer.Hello();
 
-        volunteerA.print();
-        volunteerB.print();
 
-        Human humanB(1,"Pan","Vlad","10_Feb",380494,"email.com");
-       
-        Human humanA(humanB);
 
-        Employee employeeA(3, "Mib", "Dark", "7_March", 35235, "Komar2314@gmail.com", "Developer", 3000, "8_September");
-        Employee employeeB(employeeA);
-
-        employeeA.print();
-        employeeB.print();
-
-        humanA.print();
-        humanB.print();
-
-    }
+}
 
 
 

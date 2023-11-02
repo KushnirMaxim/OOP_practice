@@ -46,6 +46,10 @@ Volunteer::~Volunteer()
 {
 }
 
+void Volunteer::Hello() {
+    cout << "Hello i am volunteer" << endl;
+}
+
 void Volunteer::print()
 {
     cout << "-----------------------" << endl;

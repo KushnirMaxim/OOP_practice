@@ -35,6 +35,12 @@ void Human::print()
 	cout << "email = " << this->email << endl;
 }
 
+void Human::Hello()
+{
+	cout << "Hello i am Human" << endl;
+}
+
 Human::~Human()
 {
+
 }

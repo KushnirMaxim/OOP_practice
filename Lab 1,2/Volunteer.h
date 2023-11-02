@@ -26,6 +26,8 @@ public:
     Volunteer(const Volunteer& other);
 
     ~Volunteer();
+    
+    void Hello()override;
 
     void print();
 };

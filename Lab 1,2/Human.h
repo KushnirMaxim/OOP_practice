@@ -1,5 +1,4 @@
 #pragma once
-
 #include<iostream>
 
 using namespace std;
@@ -27,6 +26,8 @@ public:
     
 
     void print();
+
+    virtual void Hello();
 
     virtual ~Human();
 };
