@@ -1,2 +1,7 @@
-﻿  Human.cpp
-  Lab 1,2.vcxproj -> D:\Кушнір Максим\Навчальна практика 4\Лаб 1,2\Lab 1,2\x64\Debug\Lab 1,2.exe
+﻿  Lab 1,2.cpp
+D:\Кушнір Максим\Лаб 1,2\Lab 1,2\Lab 1,2\Lab 1,2.cpp(36,11): error C2039: 'setObj': is not a member of 'Human'
+D:\Кушнір Максим\Лаб 1,2\Lab 1,2\Lab 1,2\Human.h(6): message : see declaration of 'Human'
+D:\Кушнір Максим\Лаб 1,2\Lab 1,2\Lab 1,2\Lab 1,2.cpp(44,11): error C2039: 'Hello': is not a member of 'Human'
+D:\Кушнір Максим\Лаб 1,2\Lab 1,2\Lab 1,2\Human.h(6): message : see declaration of 'Human'
+  Volunteer.cpp
+  Generating Code...

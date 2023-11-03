@@ -5,37 +5,49 @@
 
 using namespace std;
 
+void CreateObject(Human* ptr[],int i) {
+	int a;
+	cout << "Введіть який об'єкт ви хочете створити employee(1) або volunteer(2)" << endl;
+	cin >> a;
 
+	if (a == 1) {
+		ptr[i]=new Employee;
+		
+	}
+	else if (a == 2) {
+		ptr[i]=new Volunteer;
+		
+	}
+	else
+	{
+		cout << "Помилка" << endl;
+	}
+}
 
   
 
-    int main()
+int main()
+{
+	setlocale(LC_CTYPE, "ukr");
+	
+	Human* ptr[2];
+	for (int i = 0; i < 2; i++) {
+		CreateObject(ptr,i);
+		ptr[i]->setObj();
+	}
 
-    {
+	for (int i = 0; i < 2; i++) {
+		ptr[i]->print();
+	}
 
-        setlocale(LC_CTYPE, "ukr");
-        
-        Volunteer volunteerA(3, "Kushnir", "Maxim","9_April",38032523, "MaksimKush@gmail.com","9A", "Help", 3);
-        
-        Volunteer volunteerB(volunteerA);
+	for (int i = 0; i < 2; i++) {
+		ptr[i]->Hello();
+	}
 
-        volunteerA.print();
-        volunteerB.print();
-
-        Human humanB(1,"Pan","Vlad","10_Feb",380494,"email.com");
-       
-        Human humanA(humanB);
-
-        Employee employeeA(3, "Mib", "Dark", "7_March", 35235, "Komar2314@gmail.com", "Developer", 3000, "8_September");
-        Employee employeeB(employeeA);
-
-        employeeA.print();
-        employeeB.print();
-
-        humanA.print();
-        humanB.print();
-
-    }
+	for (int i = 0; i < 2; i++) {
+		ptr[i] = delete[];
+	}
+}
 
 
 
