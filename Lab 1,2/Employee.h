@@ -25,7 +25,9 @@ public:
 
     ~Employee();
 
+    void setObj()override;
+
     void Hello() override;
 
-    void print();
+    void print()override;
 };

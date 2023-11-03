@@ -23,11 +23,11 @@ public:
 
     Human(const Human& other);
 
-    
+    virtual void setObj();
 
-    void print();
+    virtual void print();
 
-    virtual void Hello();
+    virtual void Hello()= 0;;
 
     virtual ~Human();
 };

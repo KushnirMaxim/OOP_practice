@@ -29,5 +29,7 @@ public:
     
     void Hello()override;
 
-    void print();
+    void setObj()override;
+
+    void print()override;
 };

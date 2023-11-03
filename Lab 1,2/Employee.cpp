@@ -39,6 +39,17 @@ Employee::~Employee()
 
 }
 
+void Employee::setObj()
+{
+    Human::setObj();
+    cout << "position =" << endl;
+    cin >> position;
+    cout << "dataOfEmployment =" << endl;
+    cin >> dataOfEmployment;
+    cout << "currentSalary =" << endl;
+    cin >> currentSalary;
+}
+
 void Employee::Hello() 
 {
     cout << "Hello i am employee" << endl;

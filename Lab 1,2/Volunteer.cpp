@@ -50,6 +50,28 @@ void Volunteer::Hello() {
     cout << "Hello i am volunteer" << endl;
 }
 
+void Volunteer::setObj()
+{
+    Human::setObj();
+    cout << "Address =" << endl;
+    cin >> address;
+    cout << "typeOfActivity =" << endl;
+    cin >> typeOfActivity;
+    cout << "1 = Active, 2 = Pasive 3 = Suspended" << endl;
+    cin >> status;
+    if (this->status == 1) {
+        this->typeOfStatus = "Active";
+    }
+    else if (this->status == 2) {
+        this->typeOfStatus = "Pasive";
+    }
+    else if (this->status == 3) {
+        this->typeOfStatus = "Suspended";
+    }
+    else  this->typeOfStatus = "indefinite";
+
+}
+
 void Volunteer::print()
 {
     cout << "-----------------------" << endl;

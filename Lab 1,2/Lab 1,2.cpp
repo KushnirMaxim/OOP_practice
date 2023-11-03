@@ -5,21 +5,43 @@
 
 using namespace std;
 
+void CreateObject(Human* ptr[],int i) {
+	int a;
+	cout << "Введіть який об'єкт ви хочете створити employee(1) або volunteer(2)" << endl;
+	cin >> a;
 
+	if (a == 1) {
+		ptr[i]=new Employee;
+		
+	}
+	else if (a == 2) {
+		ptr[i]=new Volunteer;
+		
+	}
+	else
+	{
+		cout << "Помилка" << endl;
+	}
+}
 
   
 
 int main()
 {
-	Employee employee(1,"text","text","text",2,"text","text",123,"text");
+	setlocale(LC_CTYPE, "ukr");
+	
+	Human* ptr[2];
+	for (int i = 0; i < 2; i++) {
+		CreateObject(ptr,i);
+		ptr[i]->setObj();
+	}
 
-	employee.Hello();
-	Volunteer volunteer(1, "text", "text", "text",4, "text", "text", "text",4);
-
-	volunteer.Hello();
-
-
-
+	for (int i = 0; i < 2; i++) {
+		ptr[i]->print();
+	}
+	for (int i = 0; i < 2; i++) {
+		ptr[i]->Hello();
+	}
 }
 
 
