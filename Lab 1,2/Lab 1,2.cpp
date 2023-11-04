@@ -28,7 +28,22 @@ void CreateObject(Human* ptr[],int i) {
 
 int main()
 {
-	
+	setlocale(LC_CTYPE, "ukr");
+
+	Human* ptr[5];
+	for (int i = 0; i < 5; i++) {
+
+		CreateObject(ptr, i);
+		ptr[i]->setObj();
+	}
+
+
+	for (int i = 0; i < 5; i++) {
+		ptr[i]->print();
+	}
+	for (int i = 0; i < 5; i++) {
+		ptr[i]->Hello();
+	}
 }
 
 
