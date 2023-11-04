@@ -30,23 +30,21 @@ int main()
 {
 	setlocale(LC_CTYPE, "ukr");
 	
-	Human* ptr[2];
-	for (int i = 0; i < 2; i++) {
+	Human* ptr[5];
+	for (int i = 0; i < 5; i++) {
+
 		CreateObject(ptr,i);
 		ptr[i]->setObj();
 	}
 
-	for (int i = 0; i < 2; i++) {
+
+	for (int i = 0; i < 5; i++) {
 		ptr[i]->print();
 	}
-
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 5; i++) {
 		ptr[i]->Hello();
 	}
 
-	for (int i = 0; i < 2; i++) {
-		ptr[i] = delete[];
-	}
 }
 
 
