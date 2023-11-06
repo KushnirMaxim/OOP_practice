@@ -5,45 +5,80 @@
 
 using namespace std;
 
-void CreateObject(Human* ptr[],int i) {
-	int a;
-	cout << "Введіть який об'єкт ви хочете створити employee(1) або volunteer(2)" << endl;
-	cin >> a;
-
-	if (a == 1) {
-		ptr[i]=new Employee;
-		
-	}
-	else if (a == 2) {
-		ptr[i]=new Volunteer;
-		
-	}
-	else
+template <typename T>
+class Vector {
+private:
+	T* array= new T[10];
+	int size=0;
+	int capacity = 10;
+public:
+	int getSize()
 	{
-		cout << "Помилка" << endl;
+		return size;
 	}
-}
 
-  
+	int getCapacity()
+	{
+		return capacity;
+	}
+
+	void push_back(T element) {
+		if (size >= capacity) {
+			capacity *= 2;
+			T* newarray = new T[capacity];
+			for (int i = 0; i < size; i++) {
+				newarray[i] = array[i]; 
+			}
+			
+			delete[] array;
+			array = newarray;
+		}
+		array[size] = element;
+		size++;
+	}
+
+	void pop_back()
+	{
+		if (size > 0) {
+			size--;
+		}
+	}
+	T at(int index) const {
+		if (index >= 0 && index < size) {
+			return array[index];
+		}
+		else cout << "Помилка" << endl;
+	}
+
+	T& operator[](int index) {
+		if (index >= 0 && index < size) {
+			return array[index];
+		}
+		else cout << "Помилка" << endl;
+	}
+
+};
 
 int main()
 {
 	setlocale(LC_CTYPE, "ukr");
+	Human* ptr = new Employee;
+	Human* ptr1 = new Volunteer;
+	Vector<Human*> vector;
+	vector.push_back(ptr);
+	vector.push_back(ptr1);
 
-	Human* ptr[5];
-	for (int i = 0; i < 5; i++) {
+	cout<<"Capacity = " << vector.getCapacity() << endl;
+	cout<<"Size = " << vector.getSize() << endl;
 
-		CreateObject(ptr, i);
-		ptr[i]->setObj();
-	}
+	vector.pop_back();
 
+	cout << "Size = " << vector.getSize() << endl;
+	cout <<"Capacity = "  << vector.getCapacity() << endl;
 
-	for (int i = 0; i < 5; i++) {
-		ptr[i]->print();
-	}
-	for (int i = 0; i < 5; i++) {
-		ptr[i]->Hello();
-	}
+	vector[0]->setObj();
+	vector.at(0)->print();
+	
 }
 
 
