@@ -5,37 +5,81 @@
 
 using namespace std;
 
+template <typename T>
+class Vector {
+private:
+	T* array= new T[10];
+	int size=0;
+	int capacity = 10;
+public:
+	int getSize()
+	{
+		return size;
+	}
 
+	int getCapacity()
+	{
+		return capacity;
+	}
 
-  
+	void push_back(T element) {
+		if (size >= capacity) {
+			capacity *= 2;
+			T* newarray = new T[capacity];
+			for (int i = 0; i < size; i++) {
+				newarray[i] = array[i]; 
+			}
+			
+			delete[] array;
+			array = newarray;
+		}
+		array[size] = element;
+		size++;
+	}
 
-    int main()
+	void pop_back()
+	{
+		if (size > 0) {
+			size--;
+		}
+	}
+	T at(int index) const {
+		if (index >= 0 && index < size) {
+			return array[index];
+		}
+		else cout << "Помилка" << endl;
+	}
 
-    {
+	T& operator[](int index) {
+		if (index >= 0 && index < size) {
+			return array[index];
+		}
+		else cout << "Помилка" << endl;
+	}
 
-        setlocale(LC_CTYPE, "ukr");
-        
-        Volunteer volunteerA(3, "Kushnir", "Maxim","9_April",38032523, "MaksimKush@gmail.com","9A", "Help", 3);
-        
-        Volunteer volunteerB(volunteerA);
+};
 
-        volunteerA.print();
-        volunteerB.print();
+int main()
+{
+	setlocale(LC_CTYPE, "ukr");
+	Human* ptr = new Employee;
+	Human* ptr1 = new Volunteer;
+	Vector<Human*> vector;
+	vector.push_back(ptr);
+	vector.push_back(ptr1);
 
-        Human humanB(1,"Pan","Vlad","10_Feb",380494,"email.com");
-       
-        Human humanA(humanB);
+	cout<<"Capacity = " << vector.getCapacity() << endl;
+	cout<<"Size = " << vector.getSize() << endl;
 
-        Employee employeeA(3, "Mib", "Dark", "7_March", 35235, "Komar2314@gmail.com", "Developer", 3000, "8_September");
-        Employee employeeB(employeeA);
+	vector.pop_back();
 
-        employeeA.print();
-        employeeB.print();
+	cout << "Size = " << vector.getSize() << endl;
+	cout <<"Capacity = "  << vector.getCapacity() << endl;
 
-        humanA.print();
-        humanB.print();
-
-    }
+	vector[0]->setObj();
+	vector.at(0)->print();
+	
+}
 
 
 

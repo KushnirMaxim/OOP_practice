@@ -1,0 +1,168 @@
+[33mcommit 6e2a2750b565af3cc4e01b8f9bd09db5d705e29d[m[33m ([m[1;36mHEAD -> [m[1;32mPR6[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Sat Nov 4 17:56:51 2023 +0200
+
+    do practical work 5.3
+
+[33mcommit 204d528d47edbbd23da9042222aa9df652ce5232[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Sat Nov 4 17:53:31 2023 +0200
+
+    For merge
+
+[33mcommit 630204709bffbae176efd1ac4b565704158eacc2[m
+Merge: ba5310e 73d9afc
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Sat Nov 4 17:42:48 2023 +0200
+
+    do practical work №5
+
+[33mcommit 73d9afce61073c40c682f6131f84a06051befae7[m[33m ([m[1;32mPR5[m[33m)[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 14:00:14 2023 +0200
+
+    do practical work №5
+
+[33mcommit ba5310eb30cc2d9b49f96dbcd3344d2e1182c5a0[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 13:48:47 2023 +0200
+
+    error
+
+[33mcommit baaa0e5d53bf981378b0423b4a4213278deadbe6[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 13:43:43 2023 +0200
+
+    git commit for merge PR5
+
+[33mcommit 16c654514ab95a8411b60db8a20b43fe4cfa1036[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 13:38:55 2023 +0200
+
+    done practical work №4
+
+[33mcommit 2affc8cedf2c2e66c6a42aa29b942dd8276b0cf2[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Thu Nov 2 19:22:45 2023 +0200
+
+    add virtual method
+
+[33mcommit 3ee1a3607545e8f4c5decbb88fe3e6ca0830f255[m[33m ([m[1;32mPR4[m[33m)[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Wed Nov 1 12:05:09 2023 +0200
+
+    do practical work №4
+
+[33mcommit a8e968bbfd683d5a6a4b238c8e6f34545f59b845[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Tue Oct 31 13:17:39 2023 +0200
+
+    add Volunteer class
+
+[33mcommit a1ea61706a698fc7181dffbddcd27af1fec78a30[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Mon Oct 30 11:10:35 2023 +0200
+
+    Добавив gitignore
+
+[33mcommit 08adfc421e49837cf62ec584a577e458efb5f00c[m
+Author: fjhgbd <sfdsdf@gmail.com>
+Date:   Mon Oct 30 10:32:40 2023 +0200
+
+    git merge
+
+[33mcommit 472a4a316745917c4cba7f3f99ee8a884964f470[m
+Author: fjhgbd <sfdsdf@gmail.com>
+Date:   Mon Oct 30 10:31:43 2023 +0200
+
+    Додав конструктори і деструктор
+
+[33mcommit 785ed7579ecfe8f73bb3ba2f08b3e22bccf00559[m
+Author: fjhgbd <sfdsdf@gmail.com>
+Date:   Mon Oct 30 10:29:45 2023 +0200
+
+    Створив клас
+[33mcommit 6e2a2750b565af3cc4e01b8f9bd09db5d705e29d[m[33m ([m[1;36mHEAD -> [m[1;32mPR6[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Sat Nov 4 17:56:51 2023 +0200
+
+    do practical work 5.3
+
+[33mcommit 204d528d47edbbd23da9042222aa9df652ce5232[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Sat Nov 4 17:53:31 2023 +0200
+
+    For merge
+
+[33mcommit 630204709bffbae176efd1ac4b565704158eacc2[m
+Merge: ba5310e 73d9afc
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Sat Nov 4 17:42:48 2023 +0200
+
+    do practical work №5
+
+[33mcommit 73d9afce61073c40c682f6131f84a06051befae7[m[33m ([m[1;32mPR5[m[33m)[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 14:00:14 2023 +0200
+
+    do practical work №5
+
+[33mcommit ba5310eb30cc2d9b49f96dbcd3344d2e1182c5a0[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 13:48:47 2023 +0200
+
+    error
+
+[33mcommit baaa0e5d53bf981378b0423b4a4213278deadbe6[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 13:43:43 2023 +0200
+
+    git commit for merge PR5
+
+[33mcommit 16c654514ab95a8411b60db8a20b43fe4cfa1036[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Fri Nov 3 13:38:55 2023 +0200
+
+    done practical work №4
+
+[33mcommit 2affc8cedf2c2e66c6a42aa29b942dd8276b0cf2[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Thu Nov 2 19:22:45 2023 +0200
+
+    add virtual method
+
+[33mcommit 3ee1a3607545e8f4c5decbb88fe3e6ca0830f255[m[33m ([m[1;32mPR4[m[33m)[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Wed Nov 1 12:05:09 2023 +0200
+
+    do practical work №4
+
+[33mcommit a8e968bbfd683d5a6a4b238c8e6f34545f59b845[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Tue Oct 31 13:17:39 2023 +0200
+
+    add Volunteer class
+
+[33mcommit a1ea61706a698fc7181dffbddcd27af1fec78a30[m
+Author: KushnirMaxim <maksimkusnir2006@gmail.com>
+Date:   Mon Oct 30 11:10:35 2023 +0200
+
+    Добавив gitignore
+
+[33mcommit 08adfc421e49837cf62ec584a577e458efb5f00c[m
+Author: fjhgbd <sfdsdf@gmail.com>
+Date:   Mon Oct 30 10:32:40 2023 +0200
+
+    git merge
+
+[33mcommit 472a4a316745917c4cba7f3f99ee8a884964f470[m
+Author: fjhgbd <sfdsdf@gmail.com>
+Date:   Mon Oct 30 10:31:43 2023 +0200
+
+    Додав конструктори і деструктор
+
+[33mcommit 785ed7579ecfe8f73bb3ba2f08b3e22bccf00559[m
+Author: fjhgbd <sfdsdf@gmail.com>
+Date:   Mon Oct 30 10:29:45 2023 +0200
+
+    Створив клас
