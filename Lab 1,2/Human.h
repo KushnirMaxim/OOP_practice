@@ -5,7 +5,7 @@ using namespace std;
 class Human
 {
 private:
-    int id;
+   
 
     string surname;
 
@@ -17,11 +17,14 @@ private:
 
     string email;
 public:
+    int id;
     Human();
 
     Human(int, string, string, string, int, string);
 
     Human(const Human& other);
+    
+    int getId()const;
 
     virtual void setObj();
 

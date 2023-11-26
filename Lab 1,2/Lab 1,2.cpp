@@ -1,85 +1,83 @@
-﻿#include <iostream>
+﻿#include<iostream>
+#include<list>
+#include<map>
+#include<iterator>
+#include<algorithm>
+#include<random>
 #include"Employee.h"
-#include"Volunteer.h"
 #include"Human.h"
+#include"Volunteer.h"
 
 using namespace std;
 
-template <typename T>
-class Vector {
-private:
-	T* array= new T[10];
-	int size=0;
-	int capacity = 10;
-public:
-	int getSize()
-	{
-		return size;
-	}
+int main() {
+    setlocale(LC_ALL, "ukr");
+    list<int> oddNumbers;
+    list<int> evenNumbers;
+    list<int> mergedNumbers;
 
-	int getCapacity()
-	{
-		return capacity;
-	}
+    for (int i = 1; i <= 19; i += 2) {
+        oddNumbers.push_back(i);
+    }
 
-	void push_back(T element) {
-		if (size >= capacity) {
-			capacity *= 2;
-			T* newarray = new T[capacity];
-			for (int i = 0; i < size; i++) {
-				newarray[i] = array[i]; 
-			}
-			
-			delete[] array;
-			array = newarray;
-		}
-		array[size] = element;
-		size++;
-	}
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> dist(0, 100);
 
-	void pop_back()
-	{
-		if (size > 0) {
-			size--;
-		}
-	}
-	T at(int index) const {
-		if (index >= 0 && index < size) {
-			return array[index];
-		}
-		else cout << "Помилка" << endl;
-	}
+    for (int i = 0; i < 10; i++) {
+        evenNumbers.push_back(dist(gen) * 2);
+    }
 
-	T& operator[](int index) {
-		if (index >= 0 && index < size) {
-			return array[index];
-		}
-		else cout << "Помилка" << endl;
-	}
+    oddNumbers.sort();
+    evenNumbers.sort();
 
-};
+    merge(oddNumbers.begin(), oddNumbers.end(), evenNumbers.begin(), evenNumbers.end(), back_inserter(mergedNumbers));
 
-int main()
-{
-	setlocale(LC_CTYPE, "ukr");
-	Human* ptr = new Employee;
-	Human* ptr1 = new Volunteer;
-	Vector<Human*> vector;
-	vector.push_back(ptr);
-	vector.push_back(ptr1);
+    map<int, Human*> humanMap;
 
-	cout<<"Capacity = " << vector.getCapacity() << endl;
-	cout<<"Size = " << vector.getSize() << endl;
+    humanMap[1] = new Employee();
+    humanMap[2] = new Volunteer();
 
-	vector.pop_back();
+    int choice;
+    do {
+        cout << "Оберіть опцію:" << endl;
+        cout << "1. Додати об'єкт класу Employee до контейнера" << endl;
+        cout << "2. Додати об'єкт класу Volunteer до контейнера" << endl;
+        cout << "3. Вивести об'єкт з контейнера за Id" << endl;
+        cout << "4. Вийти" << endl;
+        cin >> choice;
 
-	cout << "Size = " << vector.getSize() << endl;
-	cout <<"Capacity = "  << vector.getCapacity() << endl;
+        if (choice == 1) {
+            Employee* emp = new Employee();
+            emp->setObj();
+            humanMap[emp->getId()] = emp;
+        }
+        else if (choice == 2) {
+            Volunteer* vol = new Volunteer();
+            vol->setObj();
+            humanMap[vol->getId()] = vol;
+        
 
-	vector[0]->setObj();
-	vector.at(0)->print();
-	
+        }
+        else if (choice == 3) {
+            int idToFind;
+            cout << "Введіть ID для пошуку: ";
+            cin >> idToFind;
+
+            auto it = humanMap.find(idToFind);
+            if (it != humanMap.end()) {
+                it->second->print();
+            }
+            else {
+                cout << "Об'єкт з таким ID не знайдено." << endl;
+            }
+        }
+
+    } while (choice != 4);
+
+    for (const auto& pair : humanMap) {
+        delete pair.second;
+    }
+
+    return 0;
 }
-
-
-

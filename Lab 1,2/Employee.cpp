@@ -1,6 +1,10 @@
 #include "Employee.h"
 
 
+int Employee::getId()
+{
+   return Human::getId();
+}
 
 Employee::Employee()
 {

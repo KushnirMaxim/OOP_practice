@@ -24,6 +24,11 @@ Human::Human(const Human& other)
 	this->email = other.email;
 }
 
+int Human::getId() const
+{
+	return id;
+}
+
 void Human::setObj()
 {
 	cout << "id = " << endl;

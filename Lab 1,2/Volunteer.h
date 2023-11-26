@@ -19,6 +19,8 @@ private:
 
 public:
 
+    int getId();
+
     Volunteer();
 
     Volunteer(int, string, string, string, int, string,string, string,int);
