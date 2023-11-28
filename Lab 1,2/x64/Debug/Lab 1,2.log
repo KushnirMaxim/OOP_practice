@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 ﻿  Employee.cpp
+<<<<<<< HEAD
   Human.cpp
   Lab 1,2.cpp
   Volunteer.cpp
@@ -7,6 +8,12 @@
 D:\Kushnir Maxim\Навчальна практика 4\Лаб 1,2\Lab 1,2\Lab 1,2\Lab 1,2.cpp(58): warning C4715: 'Vector<Human *>::operator[]': not all control paths return a value
 D:\Kushnir Maxim\Навчальна практика 4\Лаб 1,2\Lab 1,2\Lab 1,2\Lab 1,2.cpp(51): warning C4715: 'Vector<Human *>::at': not all control paths return a value
   Lab 1,2.vcxproj -> D:\Kushnir Maxim\Навчальна практика 4\Лаб 1,2\Lab 1,2\x64\Debug\Lab 1,2.exe
+=======
+  Lab 1,2.cpp
+  Volunteer.cpp
+  Generating Code...
+  Lab 1,2.vcxproj -> D:\^&%C0D1NG%&^\8\Лаб 1,2\Lab 1,2\x64\Debug\Lab 1,2.exe
+>>>>>>> ba11805156a954324c9e399c403eb3483a285096
 =======
 ﻿  Lab 1,2.cpp
   Lab 1,2.vcxproj -> D:\6.1\Лаб 1,2\Lab 1,2\x64\Debug\Lab 1,2.exe

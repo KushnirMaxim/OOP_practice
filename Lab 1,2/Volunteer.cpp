@@ -1,5 +1,10 @@
 #include "Volunteer.h"
 
+int Volunteer::getId()
+{
+    return Human::getId();
+}
+
 Volunteer::Volunteer()
 {
 }
