@@ -57,7 +57,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(519, 333);
+        MainWindow->resize(520, 337);
         actCreate = new QAction(MainWindow);
         actCreate->setObjectName("actCreate");
         actDisplay = new QAction(MainWindow);
@@ -126,7 +126,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 519, 22));
+        menubar->setGeometry(QRect(0, 0, 520, 22));
         menuMenu = new QMenu(menubar);
         menuMenu->setObjectName("menuMenu");
         MainWindow->setMenuBar(menubar);

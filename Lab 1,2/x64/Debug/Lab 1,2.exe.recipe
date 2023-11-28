@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
       <FullPath>D:\Kushnir Maxim\Навчальна практика 4\Лаб 1,2\Lab 1,2\x64\Debug\Lab 1,2.exe</FullPath>
+=======
+      <FullPath>D:\6.1\Лаб 1,2\Lab 1,2\x64\Debug\Lab 1,2.exe</FullPath>
+>>>>>>> cb726029f17989dc6feb6b8375e6e7ab4e6b28ec
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
