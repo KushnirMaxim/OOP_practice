@@ -25,8 +25,9 @@ void EmployeeCreate::on_pbCreate_clicked()
     position = ui->lePosition->text();
     currentSalary = ui->leSalary->text();
     dataOfEmployment = ui->leEmployment->text();
+    try{
     if(ui->leId->text().isEmpty() || ui->leSurname->text().isEmpty() || ui->leName->text().isEmpty() || ui->leBirth->text().isEmpty() || ui->lePhoneNum->text().isEmpty() || ui->leEmail->text().isEmpty() || ui->lePosition->text().isEmpty() || ui->leSalary->text().isEmpty() || ui->leEmployment->text().isEmpty()){
-        QMessageBox::warning(this, "Error", "Empty fields");
+            throw std::runtime_error("Error in entering data about Employee - some fields are empty");
     }
     else {
         Employee emp;
@@ -40,12 +41,18 @@ void EmployeeCreate::on_pbCreate_clicked()
         emp.setCurrentSalary(currentSalary.toDouble());
         emp.setDataOfEmployment(dataOfEmployment.toStdString());
 
+        try{
         if (db->insertIntoTable(emp)) {
             QMessageBox::information(this, "Employee`s creating", "Object is created");
         }
-        else {
-            QMessageBox::warning(this, "Error", "Error with the database!");
+        }catch(const std::exception &e){
+        QMessageBox::warning(this, "Error", "Error with the database!");
+        qCritical() << "Exception in: " << e.what();
         }
-    }  
+    }
+    }catch(const std::exception &ex){
+    QMessageBox::warning(this, "Error", "Empty fields");
+    qWarning() << "Exception in: " << ex.what();
+    }
 }
 

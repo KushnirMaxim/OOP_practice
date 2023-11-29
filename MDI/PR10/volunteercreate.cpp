@@ -24,8 +24,9 @@ void VolunteerCreate::on_pbCreate_clicked()
     activity = ui->leActivity->text();
     address = ui->leAddress->text();
     status = ui->leStatus->text();
+    try{
     if(ui->leId->text().isEmpty() || ui->leSurname->text().isEmpty() || ui->leName->text().isEmpty() || ui->leBirth->text().isEmpty() || ui->lePhoneNum->text().isEmpty() || ui->leEmail->text().isEmpty() || ui->leActivity->text().isEmpty() || ui->leAddress->text().isEmpty() || ui->leStatus->text().isEmpty()){
-        QMessageBox::warning(this, "Error", "Empty fields");
+        throw std::runtime_error("Error in entering data about Volunteer - some fields are empty");
     }
     else {
         Volunteer vol;
@@ -38,13 +39,19 @@ void VolunteerCreate::on_pbCreate_clicked()
         vol.setAddress(address.toStdString());
         vol.setActivity(activity.toStdString());
         vol.setStatus(status.toStdString());
-
+        try{
         if (db->insertIntoTable(vol)) {
             QMessageBox::information(this, "Volunteer`s creating", "Object is created");
         }
-        else {
-            QMessageBox::warning(this, "Error", "Error with the database!");
+        }catch(const std::exception &e){
+        QMessageBox::warning(this, "Error", "Error with the database!");
+        qCritical() << "Exception in: " << e.what();
         }
     }
+    }catch(const std::exception &ex){
+    QMessageBox::warning(this, "Error", "Empty fields");
+    qWarning() << "Exception in: " << ex.what();
+    }
 }
+
 

@@ -1,0 +1,8 @@
+30-11-2023 00:15:32 | Warning  | 55 | employeecreate.cpp | on_pbCreate_clicked | Exception in:  Error in entering data about Employee - some fields are empty
+
+30-11-2023 00:15:36 |   Info   | 119 | sqlite.cpp | insertIntoTable | Apartments  table
+
+30-11-2023 00:15:38 | Critical | 50 | employeecreate.cpp | on_pbCreate_clicked | Exception in:  Error inserting into Employee`s table
+
+30-11-2023 00:15:49 | Warning  | 53 | volunteercreate.cpp | on_pbCreate_clicked | Exception in:  Error in entering data about Volunteer - some fields are empty
+

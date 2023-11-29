@@ -5,6 +5,7 @@
 #include <QVariantList>
 
 #include <db.h>
+#include "logfile.h"
 
 #define DATABASE_HOSTNAME "example"
 #define DATABASE_NAME "mynewdb.sqlite"

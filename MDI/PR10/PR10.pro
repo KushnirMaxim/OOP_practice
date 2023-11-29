@@ -14,6 +14,7 @@ SOURCES += \
     Volunteer.cpp \
     employeecreate.cpp \
     employeeshow.cpp \
+    logfile.cpp \
     main.cpp \
     mainwindow.cpp \
     sqlite.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     db.h \
     employeecreate.h \
     employeeshow.h \
+    logfile.h \
     mainwindow.h \
     sqlite.h \
     volunteercreate.h \

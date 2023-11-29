@@ -41,7 +41,9 @@ bool SqliteDBManager::restoreDataBase()
 {
         if (this->openDataBase()) {
             if (!this->createTableEmployee()) {
-                if(!this->createTableVolunteer()) {return false;}
+                if(!this->createTableVolunteer()) {
+                        throw std::runtime_error("Failed to create tables");
+                        return false;}
             } else {
                 return true;
             }
@@ -56,6 +58,10 @@ bool SqliteDBManager::openDataBase()
 
         if (db.open()) {
             return true;
+        }
+        else {
+            throw std::runtime_error("Failed to open database");
+            return false;
         }
 }
 
@@ -80,6 +86,7 @@ bool SqliteDBManager::createTableEmployee()
                     TABLE_EMPLOYMENT " TEXT NOT NULL"
                     " )"
                     )){
+        throw std::runtime_error("Error in creating Employee`s table");
         b = false;
     }
 
@@ -101,6 +108,7 @@ bool SqliteDBManager::createTableVolunteer(){
                         TABLE_STATUS " TEXT NOT NULL"
                         " )"
                         )){
+        throw std::runtime_error("Error in creating Volunteers` table");
         b = false;
         }
         return b;
@@ -108,7 +116,8 @@ bool SqliteDBManager::createTableVolunteer(){
 bool SqliteDBManager::insertIntoTable(Employee& emp)
 {
         QSqlQuery query;
-        query.prepare("INSERT INTO " TABLE_EMPLOYEE " ("
+        qInfo() << TABLE_EMPLOYEE<<" table";
+        query.prepare("INSER INTO " TABLE_EMPLOYEE " ("
                       TABLE_ID ", "
                       TABLE_SURNAME ", "
                       TABLE_NAME ", "
@@ -130,7 +139,7 @@ bool SqliteDBManager::insertIntoTable(Employee& emp)
         query.bindValue(":dataOfEmployment",  QString::fromStdString(emp.getDataOfEmployment()));
 
         if (!query.exec()) {
-        qDebug() << "Error insert to Employee`s table: ";
+        throw std::runtime_error("Error inserting into Employee`s table");
         return false;
         } else return true;
 
@@ -139,7 +148,8 @@ bool SqliteDBManager::insertIntoTable(Employee& emp)
 bool SqliteDBManager::insertIntoTable(Volunteer& vol)
 {
     QSqlQuery query;
-                query.prepare("INSERT INTO " TABLE_VOLUNTEER" ("
+        qInfo() << TABLE_VOLUNTEER<<" table\n";
+                query.prepare("INSET INTO " TABLE_VOLUNTEER" ("
                               TABLE_ID ", "
                               TABLE_SURNAME ", "
                               TABLE_NAME ", "
@@ -161,7 +171,7 @@ bool SqliteDBManager::insertIntoTable(Volunteer& vol)
             query.bindValue(":status",  QString::fromStdString(vol.getStatus()));
 
                 if (!query.exec()) {
-        qDebug() << "Error insert to HotelRooms table: ";
+         throw std::runtime_error("Error inserting into Volunteers` table");
         return false;
                 } else return true;
 }
