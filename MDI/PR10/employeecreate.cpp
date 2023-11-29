@@ -15,6 +15,7 @@ EmployeeCreate::~EmployeeCreate()
 
 void EmployeeCreate::on_pbCreate_clicked()
 {
+    SqliteDBManager* db= SqliteDBManager::getInstance();
     id = ui->leId->text();
     surname = ui->leSurname->text();
     name = ui->leName->text();
@@ -28,9 +29,23 @@ void EmployeeCreate::on_pbCreate_clicked()
         QMessageBox::warning(this, "Error", "Empty fields");
     }
     else {
-        emp = new Employee(id.toInt(), surname.toStdString(), name.toStdString(), position.toStdString(), numberOfPhone.toInt(), dataOfBirth.toStdString(),  email.toStdString(),  currentSalary.toDouble(), dataOfEmployment.toStdString());
-        emit employeeCreated(emp);
-        QMessageBox::information(this, "Volunteers` creating", "Object is created");
-    }
+        Employee emp;
+        emp.setId(id.toInt());
+        emp.setSurname(surname.toStdString());
+        emp.setName(name.toStdString());
+        emp.setDataOfBirth(dataOfBirth.toStdString());
+        emp.setNumberOfPhone(numberOfPhone.toInt());
+        emp.setEmail(email.toStdString());
+        emp.setPosition(position.toStdString());
+        emp.setCurrentSalary(currentSalary.toDouble());
+        emp.setDataOfEmployment(dataOfEmployment.toStdString());
+
+        if (db->insertIntoTable(emp)) {
+            QMessageBox::information(this, "Employee`s creating", "Object is created");
+        }
+        else {
+            QMessageBox::warning(this, "Error", "Error with the database!");
+        }
+    }  
 }
 

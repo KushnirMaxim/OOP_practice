@@ -28,9 +28,23 @@ void VolunteerCreate::on_pbCreate_clicked()
         QMessageBox::warning(this, "Error", "Empty fields");
     }
     else {
-        vol = new Volunteer(id.toInt(), surname.toStdString(), name.toStdString(), activity.toStdString(), address.toStdString(),  numberOfPhone.toInt(), dataOfBirth.toStdString(), email.toStdString(), status.toStdString());
-        emit volunteerCreated(vol);
-        QMessageBox::information(this, "Volunteers` creating", "Object is created");
+        Volunteer vol;
+        vol.setId(id.toInt());
+        vol.setSurname(surname.toStdString());
+        vol.setName(name.toStdString());
+        vol.setDataOfBirth(dataOfBirth.toStdString());
+        vol.setNumberOfPhone(numberOfPhone.toInt());
+        vol.setEmail(email.toStdString());
+        vol.setAddress(address.toStdString());
+        vol.setActivity(activity.toStdString());
+        vol.setStatus(status.toStdString());
+
+        if (db->insertIntoTable(vol)) {
+            QMessageBox::information(this, "Volunteer`s creating", "Object is created");
+        }
+        else {
+            QMessageBox::warning(this, "Error", "Error with the database!");
+        }
     }
 }
 

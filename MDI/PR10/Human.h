@@ -26,6 +26,13 @@ public:
     virtual string getDataOfBirth();
     virtual string getEmail();
 
+    virtual void setId(int id);
+    virtual void setSurname(string surname);
+    virtual void setName(string name);
+    virtual void setNumberOfPhone(int numberOfPhone);
+    virtual void setDataOfBirth(string dataOfBirth);
+    virtual void setEmail(string email);
+
     virtual ~Human();
 };
 

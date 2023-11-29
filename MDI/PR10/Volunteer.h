@@ -11,6 +11,7 @@ private:
     string status;
 
 public:
+    Volunteer();
     Volunteer(int id, string surname, string name, string activity, string address,
               int numberOfPhone, string dataOfBirth, string email,
               string status);
@@ -24,6 +25,16 @@ public:
     string getActivity();
     string getStatus();
     string getAddress();
+
+    void setId(int id) override;
+    void setSurname(string surname) override;
+    void setName(string name) override;
+    void setNumberOfPhone(int numberOfPhone) override;
+    void setDataOfBirth(string dataOfBirth) override;
+    void setEmail(string email) override;
+    void setAddress(string address);
+    void setActivity(string activity);
+    void setStatus(string status);
 
 
 

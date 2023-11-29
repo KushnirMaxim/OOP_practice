@@ -13,6 +13,7 @@
 #include "Employee.h"
 #include "Volunteer.h"
 #include "volunteercreate.h"
+#include "sqlite.h"
 
 namespace Ui {
 class EmployeeCreate;
@@ -36,6 +37,8 @@ private:
     Ui::EmployeeCreate *ui;
     Employee* emp;
     QString id, surname, name, dataOfBirth, numberOfPhone, email, position, currentSalary, dataOfEmployment;
+    DBManager *db;
+    QSqlTableModel  *model;
 };
 
 #endif // EMPLOYEECREATE_H

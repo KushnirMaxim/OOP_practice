@@ -1,5 +1,11 @@
 #include "employee.h"
 
+Employee::Employee(){
+    Human();
+    position = "";
+    currentSalary = 0;
+    dataOfEmployment = "";
+}
 Employee::Employee(int id,  std::string surname,  std::string name,  std::string position,
                              int numberOfPhone,  std::string dataOfBirth,  std::string email,
                              double currentSalary,  std::string dataOfEmployment)
@@ -23,7 +29,6 @@ string Employee::getName()
 {
     return Human::getName();
 }
-
 
 int Employee::getNumberOfPhone()
 {
@@ -53,4 +58,40 @@ string Employee::getDataOfEmployment()
 string Employee::getPosition()
 {
     return position;
+}
+
+void Employee::setId(int id) {
+    Human::setId(id);
+}
+
+void Employee::setSurname(string surname) {
+    Human::setSurname(surname);
+}
+
+void Employee::setName(string name) {
+    Human::setName(name);
+}
+
+void Employee::setNumberOfPhone(int numberOfPhone) {
+    Human::setNumberOfPhone(numberOfPhone);
+}
+
+void Employee::setDataOfBirth(string dataOfBirth) {
+    Human::setDataOfBirth(dataOfBirth);
+}
+
+void Employee::setEmail(string email) {
+    Human::setEmail(email);
+}
+
+void Employee::setPosition(string position) {
+    this->position = position;
+}
+
+void Employee::setCurrentSalary(double currentSalary) {
+    this->currentSalary = currentSalary;
+}
+
+void Employee::setDataOfEmployment(string dataOfEmployment) {
+    this->dataOfEmployment = dataOfEmployment;
 }

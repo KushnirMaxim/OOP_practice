@@ -12,23 +12,30 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_VolunteerShow
 {
 public:
-    QListWidget *volunteerList;
+    QGridLayout *gridLayout;
+    QTableView *volunteerTable;
 
     void setupUi(QDialog *VolunteerShow)
     {
         if (VolunteerShow->objectName().isEmpty())
             VolunteerShow->setObjectName("VolunteerShow");
-        VolunteerShow->resize(564, 440);
-        volunteerList = new QListWidget(VolunteerShow);
-        volunteerList->setObjectName("volunteerList");
-        volunteerList->setGeometry(QRect(10, 10, 541, 401));
+        VolunteerShow->resize(648, 436);
+        gridLayout = new QGridLayout(VolunteerShow);
+        gridLayout->setObjectName("gridLayout");
+        volunteerTable = new QTableView(VolunteerShow);
+        volunteerTable->setObjectName("volunteerTable");
+
+        gridLayout->addWidget(volunteerTable, 0, 0, 1, 1);
+
 
         retranslateUi(VolunteerShow);
 

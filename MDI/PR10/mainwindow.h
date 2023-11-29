@@ -18,24 +18,27 @@
 #include "volunteercreate.h"
 #include "employeeshow.h"
 #include "volunteershow.h"
+#include "db.h"
+#include "sqlite.h"
+#include <QtSql/QSqlTableModel>
+#include <QDateTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+class QSqlTableModel;
+class DBManager;
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(DBManager* dbManager, QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    void on_employeeCreated(Employee *);
-
-    void on_volunteerCreated(Volunteer *);
-
     void on_pbCreateEmployee_clicked();
 
     void on_pbShowEmployee_clicked();
@@ -46,15 +49,11 @@ private slots:
 
     void on_pbExit_clicked();
 
-    void on_employeeDoubleClicked(QListWidgetItem* item);
-
-    void on_volunteerDoubleClicked(QListWidgetItem* item);
-
 private:
     Ui::MainWindow *ui;
     EmployeeShow *showEmployee;
     VolunteerShow *showVolunteer;
-    QVector<Employee*> employee;
-    QVector<Volunteer*> volunteer;
+    DBManager *db;
+    QSqlTableModel  *model;
 };
 #endif // MAINWINDOW_H

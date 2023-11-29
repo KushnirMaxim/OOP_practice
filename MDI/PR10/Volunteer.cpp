@@ -1,5 +1,12 @@
 #include "volunteer.h"
 
+Volunteer::Volunteer(){
+    Human();
+    address = "";
+    activity = "";
+    status = "";
+}
+
 Volunteer::Volunteer(int id,  string surname,  string name,  string activity,
                       string address, int numberOfPhone,  string dataOfBirth,
                       string email,  string status)
@@ -49,4 +56,40 @@ string Volunteer::getAddress(){
 
 string Volunteer::getStatus(){
     return status;
+}
+
+void Volunteer::setId(int id) {
+    Human::setId(id);
+}
+
+void Volunteer::setSurname(string surname) {
+    Human::setSurname(surname);
+}
+
+void Volunteer::setName(string name) {
+    Human::setName(name);
+}
+
+void Volunteer::setNumberOfPhone(int numberOfPhone) {
+    Human::setNumberOfPhone(numberOfPhone);
+}
+
+void Volunteer::setDataOfBirth(string dataOfBirth) {
+    Human::setDataOfBirth(dataOfBirth);
+}
+
+void Volunteer::setEmail(string email) {
+    Human::setEmail(email);
+}
+
+void Volunteer::setAddress(string address) {
+    this->address = address;
+}
+
+void Volunteer::setActivity(string activity) {
+    this->activity = activity;
+}
+
+void Volunteer::setStatus(string status) {
+    this->status = status;
 }

@@ -12,23 +12,30 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_EmployeeShow
 {
 public:
-    QListWidget *employeeList;
+    QGridLayout *gridLayout;
+    QTableView *employeeTable;
 
     void setupUi(QDialog *EmployeeShow)
     {
         if (EmployeeShow->objectName().isEmpty())
             EmployeeShow->setObjectName("EmployeeShow");
-        EmployeeShow->resize(548, 418);
-        employeeList = new QListWidget(EmployeeShow);
-        employeeList->setObjectName("employeeList");
-        employeeList->setGeometry(QRect(10, 10, 521, 381));
+        EmployeeShow->resize(631, 422);
+        gridLayout = new QGridLayout(EmployeeShow);
+        gridLayout->setObjectName("gridLayout");
+        employeeTable = new QTableView(EmployeeShow);
+        employeeTable->setObjectName("employeeTable");
+
+        gridLayout->addWidget(employeeTable, 0, 0, 1, 1);
+
 
         retranslateUi(EmployeeShow);
 

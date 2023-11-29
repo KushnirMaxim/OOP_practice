@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QListWidget>
 #include "employeecreate.h"
+#include "sqlite.h"
 
 namespace Ui {
 class EmployeeShow;
@@ -15,13 +16,15 @@ class EmployeeShow : public QDialog
 
 public:
     explicit EmployeeShow(QWidget *parent = nullptr);
-    void setList(const QVector<Employee *> &employee);
-    QListWidget* getListWidget();
+    void setList();
     ~EmployeeShow();
 
 private:
     Ui::EmployeeShow *ui;
-    QVector<Employee *> employee;
+    void setupModel(const QString &tableName, const QStringList &headers);
+    void createUI();
+    DBManager *db;
+    QSqlTableModel  *model;
 };
 
 #endif // EMPLOYEESHOW_H

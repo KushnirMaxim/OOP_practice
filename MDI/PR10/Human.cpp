@@ -2,6 +2,12 @@
 
 Human::Human()
 {
+    id = 0;
+    surname = "";
+    name = "";
+    dataOfBirth = "";
+    numberOfPhone = 0;
+    email = "";
 }
 
 Human::Human(int id, string surname, string name, string dataOfBirth, int numberOfPhone, string email)
@@ -48,6 +54,29 @@ string Human::getEmail(){
     return email;
 }
 
+void Human::setId(int id) {
+    this->id = id;
+}
+
+void Human::setSurname(string surname) {
+    this->surname = surname;
+}
+
+void Human::setName(string name) {
+    this->name = name;
+}
+
+void Human::setNumberOfPhone(int numberOfPhone) {
+    this->numberOfPhone = numberOfPhone;
+}
+
+void Human::setDataOfBirth(string dataOfBirth) {
+    this->dataOfBirth = dataOfBirth;
+}
+
+void Human::setEmail(string email) {
+    this->email = email;
+}
 
 Human::~Human()
 {
