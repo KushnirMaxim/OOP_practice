@@ -1,35 +1,31 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-#include <QString>
+#include "Human.h"
 
-class Employee
+class Employee : public Human
 {
-public:
-    Employee(int id, const QString &surname, const QString &name, const QString &position,
-             int numberOfPhone, const QString &dataOfBirth, const QString &email,
-             double currentSalary, const QString &dataOfEmployment);
-
-    int getId() const;
-    QString getSurname() const;
-    QString getName() const;
-    QString getPosition() const;
-    int getNumberOfPhone() const;
-    QString getDataOfBirth() const;
-    QString getEmail() const;
-    double getCurrentSalary() const;
-    QString getDataOfEmployment() const;
-
 private:
-    int id;
-    QString surname;
-    QString name;
-    QString position;
-    int numberOfPhone;
-    QString dataOfBirth;
-    QString email;
+    string position;
     double currentSalary;
-    QString dataOfEmployment;
+    string dataOfEmployment;
+
+public:
+    Employee(int id,  string surname,  string name, string position,
+             int numberOfPhone, string dataOfBirth, string email,
+             double currentSalary, string dataOfEmployment);
+
+    int getId() override;
+    string getSurname() override;
+    string getName() override;
+    int getNumberOfPhone() override;
+    string getDataOfBirth() override;
+    string getEmail() override;
+    string getPosition();
+    double getCurrentSalary();
+    string getDataOfEmployment();
+
+
 };
 
 #endif // EMPLOYEE_H

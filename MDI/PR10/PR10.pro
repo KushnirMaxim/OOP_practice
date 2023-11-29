@@ -12,23 +12,29 @@ SOURCES += \
     Employee.cpp \
     Human.cpp \
     Volunteer.cpp \
-    dialogemployee.cpp \
-    dialogvolunteer.cpp \
+    employeecreate.cpp \
+    employeeshow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    volunteercreate.cpp \
+    volunteershow.cpp
 
 HEADERS += \
     Employee.h \
     Human.h \
     Volunteer.h \
-    dialogemployee.h \
-    dialogvolunteer.h \
-    mainwindow.h
+    employeecreate.h \
+    employeeshow.h \
+    mainwindow.h \
+    volunteercreate.h \
+    volunteershow.h
 
 FORMS += \
-    dialogemployee.ui \
-    dialogvolunteer.ui \
-    mainwindow.ui
+    employeecreate.ui \
+    employeeshow.ui \
+    mainwindow.ui \
+    volunteercreate.ui \
+    volunteershow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

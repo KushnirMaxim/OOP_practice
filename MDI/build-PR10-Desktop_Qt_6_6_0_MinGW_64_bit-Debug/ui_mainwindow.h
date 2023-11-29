@@ -11,10 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,8 +26,19 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_2;
+    QLabel *label;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *pbCreateEmployee;
+    QPushButton *pbShowEmployee;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *verticalLayout_2;
+    QPushButton *pbCreateVolunteer;
+    QPushButton *pbShowVolunteer;
+    QPushButton *pbExit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -32,19 +46,82 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(742, 441);
+        MainWindow->resize(789, 427);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(60, 70, 281, 91));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(400, 70, 281, 91));
+        horizontalLayoutWidget = new QWidget(centralwidget);
+        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
+        horizontalLayoutWidget->setGeometry(QRect(70, 20, 651, 80));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(horizontalLayoutWidget);
+        label_2->setObjectName("label_2");
+        QFont font;
+        font.setPointSize(22);
+        font.setBold(true);
+        font.setItalic(true);
+        label_2->setFont(font);
+        label_2->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(label_2);
+
+        label = new QLabel(horizontalLayoutWidget);
+        label->setObjectName("label");
+        label->setFont(font);
+        label->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(label);
+
+        verticalLayoutWidget = new QWidget(centralwidget);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(110, 120, 221, 171));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        pbCreateEmployee = new QPushButton(verticalLayoutWidget);
+        pbCreateEmployee->setObjectName("pbCreateEmployee");
+        QFont font1;
+        font1.setPointSize(14);
+        pbCreateEmployee->setFont(font1);
+
+        verticalLayout->addWidget(pbCreateEmployee);
+
+        pbShowEmployee = new QPushButton(verticalLayoutWidget);
+        pbShowEmployee->setObjectName("pbShowEmployee");
+        pbShowEmployee->setFont(font1);
+
+        verticalLayout->addWidget(pbShowEmployee);
+
+        verticalLayoutWidget_2 = new QWidget(centralwidget);
+        verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
+        verticalLayoutWidget_2->setGeometry(QRect(450, 120, 221, 171));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        pbCreateVolunteer = new QPushButton(verticalLayoutWidget_2);
+        pbCreateVolunteer->setObjectName("pbCreateVolunteer");
+        pbCreateVolunteer->setFont(font1);
+
+        verticalLayout_2->addWidget(pbCreateVolunteer);
+
+        pbShowVolunteer = new QPushButton(verticalLayoutWidget_2);
+        pbShowVolunteer->setObjectName("pbShowVolunteer");
+        pbShowVolunteer->setFont(font1);
+
+        verticalLayout_2->addWidget(pbShowVolunteer);
+
+        pbExit = new QPushButton(centralwidget);
+        pbExit->setObjectName("pbExit");
+        pbExit->setGeometry(QRect(340, 330, 91, 31));
+        QFont font2;
+        font2.setPointSize(16);
+        font2.setBold(true);
+        pbExit->setFont(font2);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 742, 22));
+        menubar->setGeometry(QRect(0, 0, 789, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -58,8 +135,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270 \320\276\320\261'\321\224\320\272\321\202 \320\277\320\265\321\200\321\210\320\276\320\263\320\276 \320\277\320\276\321\205\321\226\320\264\320\275\320\276\320\263\320\276 \320\272\320\273\320\260\321\201\321\203", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270 \320\276\320\261'\321\224\320\272\321\202 \320\264\321\200\321\203\320\263\320\276\320\263\320\276 \320\277\320\276\321\205\321\226\320\264\320\275\320\276\320\263\320\276 \320\272\320\273\320\260\321\201\321\203", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Employee", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Volunteer", nullptr));
+        pbCreateEmployee->setText(QCoreApplication::translate("MainWindow", "Create Employee object", nullptr));
+        pbShowEmployee->setText(QCoreApplication::translate("MainWindow", "Show Employee objects", nullptr));
+        pbCreateVolunteer->setText(QCoreApplication::translate("MainWindow", "Create Volunteer object", nullptr));
+        pbShowVolunteer->setText(QCoreApplication::translate("MainWindow", "Show Volunteer objects", nullptr));
+        pbExit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
     } // retranslateUi
 
 };

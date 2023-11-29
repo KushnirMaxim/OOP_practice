@@ -6,16 +6,12 @@ class Human
 {
 private:
     int id;
-
     string surname;
-
     string name;
-
     string dataOfBirth;
-
     int numberOfPhone;
-
     string email;
+
 public:
     Human();
 
@@ -23,11 +19,12 @@ public:
 
     Human(const Human& other);
 
-    virtual void setObj();
-
-    virtual void print();
-
-    virtual void Hello()= 0;;
+    virtual int getId();
+    virtual string getSurname();
+    virtual string getName();
+    virtual int getNumberOfPhone();
+    virtual string getDataOfBirth();
+    virtual string getEmail();
 
     virtual ~Human();
 };

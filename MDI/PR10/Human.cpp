@@ -24,34 +24,29 @@ Human::Human(const Human& other)
 	this->email = other.email;
 }
 
-void Human::setObj()
-{
-	cout << "id = " << endl;
-	cin >> id;
-	cout << "surname = " << endl;
-	cin >> surname;
-	cout << "name = " << endl;
-	cin >> name;
-	cout << "dataOfBirth = " << endl;
-	cin >> dataOfBirth;
-	cout << "numberOfPhone = " << endl;
-	cin >> numberOfPhone;
-	cout << "email = " << endl;
-	cin >> email;
+int Human::getId(){
+    return id;
+}
+string Human::getSurname(){
+    return surname;
 }
 
 
-void Human::print()
-{
-	cout << endl << "Id = " << this->id << endl;
-	cout << "Surname = " << this->surname << endl;
-	cout << "Name = " << this->name << endl;
-	cout << "Data Of Birth = " << this->dataOfBirth << endl;
-	cout << "Number Of Phone = " << this->numberOfPhone << endl;
-	cout << "email = " << this->email << endl;
+string Human::getName(){
+    return name;
 }
 
+string Human::getDataOfBirth(){
+    return dataOfBirth;
+}
 
+int Human::getNumberOfPhone(){
+    return numberOfPhone;
+}
+
+string Human::getEmail(){
+    return email;
+}
 
 
 Human::~Human()

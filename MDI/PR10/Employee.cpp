@@ -1,56 +1,56 @@
 #include "employee.h"
 
-Employee::Employee(int id, const QString &surname, const QString &name, const QString &position,
-                   int numberOfPhone, const QString &dataOfBirth, const QString &email,
-                   double currentSalary, const QString &dataOfEmployment)
-    : id(id), surname(surname), name(name), position(position),
-    numberOfPhone(numberOfPhone), dataOfBirth(dataOfBirth),
-    email(email), currentSalary(currentSalary), dataOfEmployment(dataOfEmployment)
+Employee::Employee(int id,  std::string surname,  std::string name,  std::string position,
+                             int numberOfPhone,  std::string dataOfBirth,  std::string email,
+                             double currentSalary,  std::string dataOfEmployment)
+                            : Human(id, surname, name, dataOfBirth, numberOfPhone, email), position(position),
+                            currentSalary(currentSalary), dataOfEmployment(dataOfEmployment)
 {
-    // Жодної зміни не потрібно додавати сюди
+
 }
 
-int Employee::getId() const
+int Employee::getId()
 {
-    return id;
+    return Human::getId();
 }
 
-QString Employee::getSurname() const
+string Employee::getSurname()
 {
-    return surname;
+    return Human::getSurname();
 }
 
-QString Employee::getName() const
+string Employee::getName()
 {
-    return name;
+    return Human::getName();
 }
 
-QString Employee::getPosition() const
+
+int Employee::getNumberOfPhone()
 {
-    return position;
+    return Human::getNumberOfPhone();
 }
 
-int Employee::getNumberOfPhone() const
+string Employee::getDataOfBirth()
 {
-    return numberOfPhone;
+    return Human::getDataOfBirth();
 }
 
-QString Employee::getDataOfBirth() const
+string Employee::getEmail()
 {
-    return dataOfBirth;
+    return Human::getEmail();
 }
 
-QString Employee::getEmail() const
-{
-    return email;
-}
-
-double Employee::getCurrentSalary() const
+double Employee::getCurrentSalary()
 {
     return currentSalary;
 }
 
-QString Employee::getDataOfEmployment() const
+string Employee::getDataOfEmployment()
 {
     return dataOfEmployment;
+}
+
+string Employee::getPosition()
+{
+    return position;
 }

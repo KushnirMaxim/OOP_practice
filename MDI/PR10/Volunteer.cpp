@@ -1,49 +1,52 @@
 #include "volunteer.h"
 
-Volunteer::Volunteer(int id, const QString &surname, const QString &name, const QString &activity,
-                     int numberOfPhone, const QString &dataOfBirth, const QString &email,
-                     const QString &startDate)
-    : id(id), surname(surname), name(name), activity(activity), numberOfPhone(numberOfPhone),
-    dataOfBirth(dataOfBirth), email(email), startDate(startDate)
+Volunteer::Volunteer(int id,  string surname,  string name,  string activity,
+                      string address, int numberOfPhone,  string dataOfBirth,
+                      string email,  string status)
+    : Human(id, surname, name, dataOfBirth, numberOfPhone, email), activity(activity),
+    address(address), status(status)
 {
+
 }
 
-int Volunteer::getId() const
+int Volunteer::getId()
 {
-    return id;
+    return Human::getId();
 }
 
-QString Volunteer::getSurname() const
+string Volunteer::getSurname()
 {
-    return surname;
+    return Human::getSurname();
 }
 
-QString Volunteer::getName() const
+string Volunteer::getName()
 {
-    return name;
+    return Human::getName();
 }
 
-QString Volunteer::getActivity() const
+int Volunteer::getNumberOfPhone()
 {
+    return Human::getNumberOfPhone();
+}
+
+string Volunteer::getDataOfBirth()
+{
+    return Human::getDataOfBirth();
+}
+
+string Volunteer::getEmail()
+{
+    return Human::getEmail();
+}
+
+string Volunteer::getActivity(){
     return activity;
 }
 
-int Volunteer::getNumberOfPhone() const
-{
-    return numberOfPhone;
+string Volunteer::getAddress(){
+    return address;
 }
 
-QString Volunteer::getDataOfBirth() const
-{
-    return dataOfBirth;
-}
-
-QString Volunteer::getEmail() const
-{
-    return email;
-}
-
-QString Volunteer::getStartDate() const
-{
-    return startDate;
+string Volunteer::getStatus(){
+    return status;
 }

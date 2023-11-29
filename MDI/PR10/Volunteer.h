@@ -1,33 +1,32 @@
 #ifndef VOLUNTEER_H
 #define VOLUNTEER_H
 
-#include <QString>
+#include "Human.h"
 
-class Volunteer
+class Volunteer : public Human
 {
-public:
-    Volunteer(int id, const QString &surname, const QString &name, const QString &activity,
-              int numberOfPhone, const QString &dataOfBirth, const QString &email,
-              const QString &startDate);
-
-    int getId() const;
-    QString getSurname() const;
-    QString getName() const;
-    QString getActivity() const;
-    int getNumberOfPhone() const;
-    QString getDataOfBirth() const;
-    QString getEmail() const;
-    QString getStartDate() const;
-
 private:
-    int id;
-    QString surname;
-    QString name;
-    QString activity;
-    int numberOfPhone;
-    QString dataOfBirth;
-    QString email;
-    QString startDate;
+    string address;
+    string activity;
+    string status;
+
+public:
+    Volunteer(int id, string surname, string name, string activity, string address,
+              int numberOfPhone, string dataOfBirth, string email,
+              string status);
+
+    int getId() override;
+    string getSurname() override;
+    string getName() override;
+    int getNumberOfPhone() override;
+    string getDataOfBirth() override;
+    string getEmail() override;
+    string getActivity();
+    string getStatus();
+    string getAddress();
+
+
+
 };
 
 #endif // VOLUNTEER_H
